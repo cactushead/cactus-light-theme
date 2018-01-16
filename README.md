@@ -24,4 +24,4 @@ This template requires the MantisThemeManager plugin: https://github.com/cactush
 
 ## * Progress Bars
 Included in this theme is the styling for using alternative progress bars from the default bootstrap ones.
-Please see my MantisBT-progress-bars (comming soon) for full info on how to implement this feature.
+Please see my MantisBT-progress-bars (coming soon) for full info on how to implement this feature.
