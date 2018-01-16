@@ -7,7 +7,7 @@ cactus light theme does not require any additional javascript to override the de
 
 
 ## Version
-0.1 - Tested with MantisBT 2.9.0
+1.0 - Tested with MantisBT 2.9.0
 
 ## Prerequisites:
 This template requires the MantisThemeManager plugin: https://github.com/cactushead/MantisThemeManager  Thanks to original creator Tim Petruski! and fork by Samunosuke.
