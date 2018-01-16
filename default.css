@@ -1,0 +1,515 @@
+/*
+Theme Name: 	cactus light
+Theme URL: 		https://github.com/cactushead/cactus-light-theme
+Version: 		1.0
+Date: 			16th January 2018
+Author: 		Cactushead
+Author URI: 	http://cactushead.net/
+Description: 	A theme for MantisBT based bugtracking system.
+				Use this theme to override mantisBT default files to give a different look to MantisBT
+				Note: does not use any javascript to implement changes
+
+Prerequisites:	Install the forked version of MantisThemeManager by Cactushead to support MantisBT 2.x
+				https://github.com/cactushead/MantisThemeManager
+				
+				or install the forked version of MantisThemeManager by Samunosuke to support MantisBT 2.x
+				https://github.com/Samunosuke/MantisThemeManager
+
+				* Originally forked from MantisBT Theme Manager by Tim Pietrusky
+				* https://github.com/TimPietrusky/MantisThemeManager
+
+Progress Bars:	If you want to use the progress bars that will invert the text color based on the
+				background-color then you will need to change a few files.
+				Bars also change color depending on percentage value:
+					0 = grey
+					1-30 = green
+					31-50 = blue
+					51-70 = orange
+					71-100 = red
+				* https://github.com/cactushead/
+
+License: 		GNU General Public License v2 or later
+License URL: 	http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.skin-3 .navbar {
+    background: #0747A6 none !important;
+	color: #DEEBFF !important;
+}
+
+.skin-3 .sidebar {
+	background-color: #F4F5F7;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    border-color: #F4F5F7;
+	color: #42526E;
+}
+
+#dropdown_projects_menu li.active a {
+	color: #fff !important;
+	background-color: #337ab7 !important;
+	/*margin: 0px !important;*/
+}
+
+#dropdown_projects_menu li.active a:hover {
+	color: #fff !important;
+	background-color: #27ae60 !important;
+}
+
+.skin-3 .nav-list>li>a { background-color: #F4F5F7 !important; }
+
+.skin-3 .breadcrumbs {
+/*    border-width: 0;*/
+    background-color: #F5F5F5 !important;
+/*    border-radius: 4px;
+    margin: 8px 8px 0;*/
+}
+
+.skin-3 .sidebar { background-color: #F4F5F7 !important; }
+
+.sidebar.compact .nav-list>li>a>.menu-icon {
+	display: inline !important;
+	margin-right: 8px !important;
+}
+
+.sidebar.compact .nav-list>li>a {
+	text-align: left !important;
+    padding-left: 30px !important;
+}
+
+#sidebar .nav-list>li.active.highlight>a,
+#sidebar .nav-list>li.active>a {
+	background-color: #d4e9f7 !important;
+    color: #0052CC !important;
+}
+
+#sidebar .nav-list li > .arrow:before {	border-color: transparent #0052CC transparent transparent !important; }
+
+.sidebar.compact .nav-list>li {
+	border: 0px;
+	border-style: none !important;
+}
+
+.sidebar.compact .nav-list>li>a:hover {	background-color: #d3eedf !important; /*#ebe9f0 !important;*/ }
+
+.nav-list>li:before { width: 0px !important; }
+
+.navbar-header .navbar-brand { color: #fff !important; }
+
+/*Style the sidebar collapse button*/
+.skin-3 .sidebar-toggle {
+    background-color: #ABBAC3 !important;
+	cursor: pointer !important;
+	color: #42526E !important;
+}
+
+.skin-3 .sidebar-toggle>.ace-icon {	background-color: transparent !important; }
+
+.skin-3 .sidebar-toggle:hover {
+    background-color: #2A91D8 !important;
+	color: #fff !important;
+}
+
+.sidebar .sidebar-toggle>.ace-icon { border: 0 !important; }
+
+.sidebar .sidebar-toggle>.ace-icon { color: inherit !important; }
+
+.sidebar .sidebar-toggle>.ace-icon {
+	font-size: 20px !important;
+	line-height: 20px !important;
+}
+
+.sidebar .sidebar-toggle { border-width: 0; }
+
+.sidebar .sidebar-toggle:before { border: 0 !important; }
+
+#main-container .sidebar.compact .nav-list>li>a { padding-left: 10px !important; }
+
+/* Override hamburger menu for very small screens */
+#navbar .navbar-toggle { background-color: #337ab7 !important }
+
+/* Override hamburger menu */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	#menu-toggler { background-color: #337ab7 !important }
+
+	#navbar.navbar-collapse .navbar-container,
+	#navbar.navbar-collapse:before { background-color: #0747A6; }	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {		
+	#main-container .sidebar.compact + .main-content {
+        margin-right: auto !important;
+        margin-left: 200px !important;
+    }
+
+    #main-container .sidebar.menu-min + .main-content {
+        margin-right: auto  !important;
+        margin-left: 43px !important;
+    }
+
+    #main-container .sidebar.compact { width: 200px !important; }
+	
+	#main-container .sidebar.menu-min,
+	#main-container .sidebar.menu-min.compact,
+	#main-container .sidebar.menu-min.navbar-collapse {
+		width: 43px !important;
+	}
+	
+	#main-container .sidebar.compact.navbar-collapse { width: 43px !important; }
+
+    #main-container .sidebar.compact ~ .footer .footer-inner { left: 200px; }
+
+    #main-container .sidebar.menu-min ~ .footer .footer-inner { left: 43px; }
+
+    #main-container .rtl .sidebar.compact + .main-content {
+        margin-left: auto !important;
+        margin-right: 200px !important;
+    }
+
+    #main-container .rtl .sidebar.menu-min + .main-content {
+        margin-left: auto !important;
+        margin-right: 43px !important;
+    }
+
+    #main-container .rtl .sidebar.compact ~ .footer .footer-inner { right: 200px !important; }
+
+    #main-container .rtl .sidebar.menu-min ~ .footer .footer-inner { right: 43px !important; }
+
+    #main-container .navbar.navbar-collapse .navbar-header { float: left !important; }
+
+    #main-container .navbar.navbar-collapse .navbar-buttons {
+        float: right !important;
+        border-style: none !important;
+        width: auto;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #main-container .sidebar.compact + .main-content {
+        margin-right: auto !important;
+        margin-left: 200px !important;
+    }
+
+    #main-container .sidebar.menu-min + .main-content {
+        margin-right: auto  !important;
+        margin-left: 43px !important;
+    }
+			
+	#main-container .sidebar.compact { width: 200px !important;	}
+
+	#main-container .sidebar.menu-min,
+	#main-container .sidebar.menu-min.compact,
+	#main-container .sidebar.menu-min.navbar-collapse {
+		width: 43px !important;
+	}
+	
+	#main-container .sidebar.compact.navbar-collapse { width: 43px !important; }
+
+    #main-container .sidebar.compact ~ .footer .footer-inner { left: 200px !important; }
+
+    #main-container .sidebar.menu-min ~ .footer .footer-inner { left: 43px !important; }
+
+    #main-container .rtl .sidebar.compact + .main-content {
+        margin-left: auto !important;
+        margin-right: 200px !important; 
+    }
+
+    #main-container .rtl .sidebar.menu-min + .main-content {
+        margin-left: auto !important;
+        margin-right: 43px !important;
+    }
+
+    #main-container .rtl .sidebar.compact ~ .footer .footer-inner { right: 200px !important; }
+
+    #main-container .rtl .sidebar.menu-min ~ .footer .footer-inner { right: 43px !important; }	
+}
+																							
+/* Insert theme information into footer */
+#powered-by-mantisbt-logo:before {	
+	border-radius: 4px;	
+	padding: 3px 10px;
+	margin-right: 20px;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: right;
+	display: block;
+	float: left;
+	white-space: pre;
+	content: "cactus light v1.0\Atheme by cactushead";
+}																																									
+	
+a {
+    color: #42526E !important;
+    text-decoration: none;
+}
+
+.widget-header { color: #0052CC !important; }
+
+.widget-title {	
+	font-size: 1.71428571em !important;
+    font-style: inherit !important;
+    font-weight: 500 !important;
+    letter-spacing: -.01em !important;
+    line-height: 1.16666667 !important;
+    margin-top: 28px !important;
+    color: #172B4D !important;
+}
+
+.widget-toolbox { background-color: #ffffff !important; }
+
+.widget-toolbox:first-child { border-bottom: 0px !important; }
+
+[class*=widget-color-]>.widget-body .table thead:first-child tr {
+	background: #fff !important;
+	background-image: none !important;
+}
+
+[class*=widget-color-]>.widget-body .widget-box .table thead:first-child tr {
+	background: #f6f6f6 !important;
+	border-top: 2px solid #DFE1E6 !important;
+	background-image: none !important;
+}
+
+.widget-main .table>thead>tr {
+	background: #fff !important;
+	border-bottom: 2px solid #DFE1E6 !important;
+	background-image: none !important;
+}
+
+[class*=widget-color-]>.widget-body .widget-box {
+	border-top: 0px solid #fff !important;
+	border-left: 1px solid #fff !important;
+	border-right: 1px solid #fff !important;
+	border-bottom: 2px solid #DFE1E6 !important;
+	margin-bottom: 20px !important;
+}
+
+.widget-body .table.table-bordered thead:first-child>tr {
+	border-top: 0px !important;
+	border-bottom: 2px solid #DFE1E6 !important;
+}
+
+.widget-toolbox:last-child { border-top: 2px solid #DFE1E6 !important; }
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+	border: 0px !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) { background-color: #ffffff !important; }
+
+.table-striped>tbody>tr:nth-of-type(odd):hover { background-color: #f5f5f5 !important; }
+
+.badge,
+.label {
+	font-weight: 400 !important;
+    background-color: #42526E !important;
+    text-shadow: none !important;
+}
+
+.widget-title .badge { background-color: #ABBAC3 !important; }
+
+.breadcrumbs .label { background-color: #42526E !important; }
+
+.widget-toolbox .label { background-color: #0052CC !important; }
+
+.label.arrowed-in:before,
+.label.arrowed:before {
+	border-right-color: #42526E !important;
+}
+
+.label.arrowed-in-right:after,
+.label.arrowed:after {
+    border-color: #42526E transparent #42526E #42526E !important;
+}
+
+.footer .footer-inner .footer-content {
+    border-top: 2px solid #E5E5E5 !important;
+    background-color: #fcfcfc;
+}
+
+/* navbar buttons */
+.btn-group.btn-corner>.btn.btn-sm {
+	background-color: #2A91D8 !important;
+	border-width: 0px !important;
+	padding: 5px 10px;
+	margin: 5px !important;
+	border-radius: 3px !important;
+}
+
+.btn-group.btn-corner>.btn.btn-sm:hover { background-color: #27ae60 !important; }
+
+.btn-group { padding-right: 30px !important; }
+
+/* navbar dropdowns */
+.ace-nav>li { border-left: 0 !important; }
+
+.ace-nav>li.grey>a { background-color: #0747A6 !important; }
+
+.ace-nav>li.grey>a:hover { background-color: #27ae60 !important; }
+
+#dropdown_projects_menu>a { background-color: #0366d6 !important; }
+
+#dropdown_projects_menu>a:hover { background-color: #27ae60 !important; }
+
+#dropdown_projects_menu li a:hover,
+.dropdown-yellow>li.active:hover>a,
+.dropdown-yellow>li.active>a,
+.dropdown-yellow>li:hover>a,
+.dropdown-yellow>li>a:active,
+.dropdown-yellow>li>a:focus {
+    background-color: #d4e9f7 !important;
+	color: #0052CC !important;
+	border: 0px !important;
+}
+
+.ace-nav>li>a { color: #fff !important; }
+
+.skin-3 .nav-list li.active>a:before { border-color: transparent #0747A6 transparent transparent !important; }
+
+.btn.btn-primary.btn-white.btn-round {
+	color: #FFF !important;
+	background-color: #428BCA !important;
+}
+.btn.btn-primary.btn-white.btn-round:hover {
+	color: #FFF !important;
+	background-color: #8aafce !important;
+}
+
+.progress_bar_padding { padding-left: 3px; }
+
+.text_color { color:#393939 !important; padding-left: 15px; }
+
+.text_padding { padding-left: 30px !important; }
+
+.widget-color-blue>.widget-header {
+    background: #000066 !important;
+    border-color: #000066 !important;
+}
+
+.widget-color-blue2 { border-color: #ffffff !important; }
+
+.widget-color-blue2>.widget-header {
+    background: #ffffff !important;
+    border-color: #ffffff !important;	
+}
+
+#assigned .widget-header,
+#unassigned .widget-header,
+#reported .widget-header,
+#resolved .widget-header,
+#recent_mod .widget-header,
+#monitored .widget-header,
+#timeline .widget-header {    
+	border-bottom: 2px solid #DFE1E6 !important;
+}
+
+#assigned .table,
+#unassigned .table,
+#reported .table,
+#resolved .table,
+#recent_mod .table,
+#monitored .table {	
+	margin-bottom: 10px;
+}
+
+.profile-activity .thumbicon { background-color: #000066 !important; }
+
+.btn-primary:focus { background-color: #666666 !important; }
+
+.btn-primary, .btn-primary.focus, .btn-primary:focus {
+    background-color: #111111 !important;
+    border-color: #FFFFFF !important;
+}
+
+td.small-caption.category { background-color: #f6f6f6; }
+
+.widget-title .white { color: #42526E !important; }
+
+div[id^='roadmap'] .label,
+div[id^='changelog'] .label{
+	background-color: #42526E !important;
+	color: #fff;
+	border-radius: 4px;
+	font-weight: 400 !important;
+	padding-bottom: 3px !important;
+}
+
+div[id^='roadmap'] .label>strong,
+div[id^='changelog'] .label>strong {
+	font-weight: 400 !important;
+}
+
+/* Timeline Icon Colors */
+#timeline .fa.fa-check { background-color: #954eb3 !important; }
+#timeline .fa.fa-flag-o { background-color: #3fc0d4 !important; }
+#timeline .fa.fa-plus { background-color: #27ae60 !important; }
+#timeline .fa.fa-comment-o { background-color: #f79514 !important; }
+#timeline .fa.fa-power-off { background-color: #dc3c36 !important; }
+#timeline .fa.fa-thumbs-o-up { background-color: #0976bc !important; }
+#timeline .fa.fa-refresh { background-color: #F8ED62 !important; color: #666; }
+
+/* Status colours */
+.status-10-color { color: #dc3c36 !important; background-color: #dc3c36 !important; } /* NEW - red */
+.status-20-color { color: #954eb3 !important; background-color: #954eb3 !important; } /* FEEDBACK - purple */
+.status-30-color { color: #f79514 !important; background-color: #f79514 !important; } /* ACKNOWLEDGED - orange */
+.status-40-color { color: #FF69B4 !important; background-color: #EB018A !important; } /* CONFIRMED - pink */
+.status-50-color { color: #3fc0d4 !important; background-color: #3fc0d4 !important; } /* ASSIGNED - blue */
+.status-80-color { color: #27ae60 !important; background-color: #27ae60 !important; } /* RESOLVED - green */
+.status-90-color { color: #0976bc !important; background-color: #0976bc !important; } /* CLOSED - grey */
+
+/* Progress Bar Styles
+   will only apply if changes made to MantisBT files */
+.ddiv { 
+	position: absolute;
+	height: 18px;
+	border-radius: 3px;
+}
+.progrezzcontainer {
+	width: 100%;
+	margin-top: 5px;
+	position: relative;
+}
+.progrezzbg { 
+	background: #ddd;
+	z-index: 1;
+	width: 100%; 
+	border-radius: 3px;
+}
+
+.progrezz { 
+	background: black; 
+	z-index: 2; 
+	border-radius: 3px;
+}
+
+.progrezztext { 
+	position: absolute; 
+	font-family: Arial, Helvetica; 
+	font-size: 12px; 
+	mix-blend-mode: difference; 
+	color: white; 
+	z-index: 3; 
+	width: 100%; 
+	padding-top: 1px;	
+	text-align: center;
+}
+
+.progrezzcolor { 
+	mix-blend-mode: screen; 
+	width: 100%; 
+	z-index: 4; 
+}
+
+.progrezzcolor0 { background-color: #999999; } /*grey progress bar*/
+.progrezzcolor1 { background-color: #59A84B; } /*green progress bar*/
+.progrezzcolor2 { background-color: #2A91D8; } /*blue progress bar*/
+.progrezzcolor3 { background-color: #F2BB46; } /*orange progress bar*/
+.progrezzcolor4 { background-color: #CA5952; } /*red progress bar*/
