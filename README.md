@@ -17,10 +17,10 @@ This template requires the MantisThemeManager plugin: https://github.com/cactush
 ## Installation:
 1. Create the themes folder in the mantis/css directory if it does not yet exist
 2. Copy the `cactus light` folder with all its contents to `<mantis-root>/css/themes/`
-3. Access the Management interface in Mantis BT and select "Manage Plugins" tab
+3. Access the Management interface in Mantis BT and select **Manage Plugins** tab
 4. Install the MantisThemeManager plugin
 5. Open the MantisThemeManager configuration interface (click on the name which becomes a link)
-6. Choose the theme and apply by clicking the "Change theme" button
+6. Choose the theme and apply by clicking the **Change theme** button
 
 ## * Progress Bars
 Included in this theme is the styling for using alternative progress bars from the default bootstrap ones.
