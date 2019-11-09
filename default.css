@@ -1,8 +1,9 @@
 /*
 Theme Name: 	cactus light
 Theme URL: 		https://github.com/cactushead/cactus-light-theme
-Version: 		1.0
+Version: 		1.01
 Date: 			16th January 2018
+Last Update:    11 November 2019
 Author: 		Cactushead
 Author URI: 	http://cactushead.net/
 Description: 	A theme for MantisBT based bugtracking system.
@@ -237,7 +238,7 @@ License URL: 	http://www.gnu.org/licenses/gpl-2.0.html
 	display: block;
 	float: left;
 	white-space: pre;
-	content: "cactus light v1.0\Atheme by cactushead";
+	content: "cactus light v1.01\Atheme by cactushead";
 }																																									
 	
 a {
@@ -246,6 +247,14 @@ a {
 }
 
 .widget-header { color: #0052CC !important; }
+
+.widget-box[class*="widget-color-"] > .widget-header {
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-color: #f5f5f5 !important;
+  border: 1px solid #e5e5e5 !important;
+  padding-top: 5px;
+}
 
 .widget-title {	
 	font-size: 1.71428571em !important;
